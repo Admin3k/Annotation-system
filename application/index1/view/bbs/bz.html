@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>数据标注</title>
+</head>
+<body>
+	<form action="{:url('bbs/cl')}" method="POST">
+	{foreach $data as $key=>$v}
+		{$v.Id}
+		<input type="hidden" name="id[{$v.Id}]">
+		<!--<input type="text" name="id[{$v.Id}]"><br />-->
+		.标注数据:{$v.bd}<br />
+		标签：<input type="text" name="bq[]"><br />
+	{/foreach}
+		<input type="submit" name="tj" value="提交">
+	</form>
+</body>
+</html>

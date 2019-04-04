@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<p>用户列表</p>>
+	{foreach $data as $key=>$v}
+		序号:{$v.Id}=>用户名:{$v.admin}=>密码:{$v.pwd}=>邮箱:{$v.email}<br />
+	{/foreach}
+</body>
+</html>

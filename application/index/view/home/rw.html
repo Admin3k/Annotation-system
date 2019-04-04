@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>任务领取</title>
+</head>
+<body>
+	<form action="{:url('home/rwjs')}" method="POST">
+		用户{$Think.session.username}<br />
+		选择任务领取数量：<select name="num">
+				<option value="10">10</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+				<option value="300">300</option>
+				<option value="500">500</option>
+				<option value="1000">1000</option>
+			</select><br />
+			<input type="submit" value="提交">
+	</form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>数据标注</title>
+	<style type="text/css">
+		.pagination li{
+			display:inline;
+			padding-right: 20px;
+			list-style: none;
+		}
+		ul li{list-style: none;}
+	</style>
+</head>
+<body>
+	<form action="{:url('home/cl')}" method="POST">
+	<div>
+	<ul>
+		<a href="{:url('home/index')}">返回上页</a>
+	{volist name='list' id='user'}
+		<input type="hidden" name="id[]" value="{$user.did}">
+	    <li> {$user.did}&nbsp;&nbsp;&nbsp;&nbsp;{$user.tagdata}</li>
+	    <select name="tag[]">
+		  <option value ="volvo">Volvo</option>
+		  <option value ="saab">Saab</option>
+		  <option value="opel">Opel</option>
+		  <option value="audi">Audi</option>
+		</select>
+	{/volist}
+	</ul>
+	</div>
+	{$list->render()}
+	<input type="submit" value="Submit" />
+	</form>
+</body>
+</html>

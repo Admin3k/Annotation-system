@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>数据标注</title>
+	<style type="text/css">
+		.pagination li{
+			display:inline;
+			padding-right: 20px;
+			list-style: none;
+		}
+		ul li{list-style: none;}
+	</style>
+</head>
+<body>
+	<div>
+	<ul>
+	{volist name='list' id='user'}
+	    <li> {$user.did}数据：{$user.tagdata}标签：{$user.lable}</li>
+	{/volist}
+	</ul>
+	</div>
+	{$list->render()}
+</body>
+</html>
